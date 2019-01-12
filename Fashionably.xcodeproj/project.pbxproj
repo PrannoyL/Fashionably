@@ -12,6 +12,7 @@
 		8157829821EA814F00B2F911 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8157829621EA814F00B2F911 /* Main.storyboard */; };
 		8157829A21EA815000B2F911 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8157829921EA815000B2F911 /* Assets.xcassets */; };
 		8157829D21EA815000B2F911 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8157829B21EA815000B2F911 /* LaunchScreen.storyboard */; };
+		815782A821EA8D1400B2F911 /* ClothesClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815782A721EA8D1400B2F911 /* ClothesClassifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		8157829921EA815000B2F911 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8157829C21EA815000B2F911 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8157829E21EA815000B2F911 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		815782A721EA8D1400B2F911 /* ClothesClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesClassifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,39 @@
 		8157829121EA814F00B2F911 /* Fashionably */ = {
 			isa = PBXGroup;
 			children = (
-				8157829221EA814F00B2F911 /* AppDelegate.swift */,
-				8157829421EA814F00B2F911 /* ViewController.swift */,
-				8157829621EA814F00B2F911 /* Main.storyboard */,
+				815782A621EA8CEE00B2F911 /* Controller */,
+				815782A521EA8CE400B2F911 /* View */,
+				815782A421EA8CCD00B2F911 /* Model */,
 				8157829921EA815000B2F911 /* Assets.xcassets */,
-				8157829B21EA815000B2F911 /* LaunchScreen.storyboard */,
 				8157829E21EA815000B2F911 /* Info.plist */,
 			);
 			path = Fashionably;
+			sourceTree = "<group>";
+		};
+		815782A421EA8CCD00B2F911 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				815782A721EA8D1400B2F911 /* ClothesClassifier.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		815782A521EA8CE400B2F911 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8157829B21EA815000B2F911 /* LaunchScreen.storyboard */,
+				8157829621EA814F00B2F911 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		815782A621EA8CEE00B2F911 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8157829221EA814F00B2F911 /* AppDelegate.swift */,
+				8157829421EA814F00B2F911 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8157829521EA814F00B2F911 /* ViewController.swift in Sources */,
+				815782A821EA8D1400B2F911 /* ClothesClassifier.swift in Sources */,
 				8157829321EA814F00B2F911 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
