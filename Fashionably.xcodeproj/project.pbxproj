@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BD825881F871F2A8B1BCB14 /* Pods_Fashionably.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABA8741411F9C0ED92F1D25 /* Pods_Fashionably.framework */; };
 		8157829321EA814F00B2F911 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8157829221EA814F00B2F911 /* AppDelegate.swift */; };
 		8157829521EA814F00B2F911 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8157829421EA814F00B2F911 /* ViewController.swift */; };
 		8157829821EA814F00B2F911 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8157829621EA814F00B2F911 /* Main.storyboard */; };
 		8157829A21EA815000B2F911 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8157829921EA815000B2F911 /* Assets.xcassets */; };
 		8157829D21EA815000B2F911 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8157829B21EA815000B2F911 /* LaunchScreen.storyboard */; };
-		815782A821EA8D1400B2F911 /* ClothesClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815782A721EA8D1400B2F911 /* ClothesClassifier.swift */; };
+		815782A821EA8D1400B2F911 /* Clothing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815782A721EA8D1400B2F911 /* Clothing.swift */; };
+		815782AA21EAB66000B2F911 /* WeatherDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815782A921EAB66000B2F911 /* WeatherDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A66355F074631ED6DC965F7 /* Pods-Fashionably.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fashionably.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fashionably/Pods-Fashionably.release.xcconfig"; sourceTree = "<group>"; };
+		5A7A9D1657203A6A0C20A377 /* Pods-Fashionably.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fashionably.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fashionably/Pods-Fashionably.debug.xcconfig"; sourceTree = "<group>"; };
 		8157828F21EA814F00B2F911 /* Fashionably.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fashionably.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8157829221EA814F00B2F911 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8157829421EA814F00B2F911 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -23,7 +27,9 @@
 		8157829921EA815000B2F911 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8157829C21EA815000B2F911 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8157829E21EA815000B2F911 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		815782A721EA8D1400B2F911 /* ClothesClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesClassifier.swift; sourceTree = "<group>"; };
+		815782A721EA8D1400B2F911 /* Clothing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clothing.swift; sourceTree = "<group>"; };
+		815782A921EAB66000B2F911 /* WeatherDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataModel.swift; sourceTree = "<group>"; };
+		8ABA8741411F9C0ED92F1D25 /* Pods_Fashionably.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fashionably.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BD825881F871F2A8B1BCB14 /* Pods_Fashionably.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1608D05E90B5B81F8BA2DC45 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8ABA8741411F9C0ED92F1D25 /* Pods_Fashionably.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8157828621EA814F00B2F911 = {
 			isa = PBXGroup;
 			children = (
 				8157829121EA814F00B2F911 /* Fashionably */,
 				8157829021EA814F00B2F911 /* Products */,
+				D6D215F8DA977D2ACCE22820 /* Pods */,
+				1608D05E90B5B81F8BA2DC45 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,7 +85,8 @@
 		815782A421EA8CCD00B2F911 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				815782A721EA8D1400B2F911 /* ClothesClassifier.swift */,
+				815782A721EA8D1400B2F911 /* Clothing.swift */,
+				815782A921EAB66000B2F911 /* WeatherDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -91,6 +109,15 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		D6D215F8DA977D2ACCE22820 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5A7A9D1657203A6A0C20A377 /* Pods-Fashionably.debug.xcconfig */,
+				3A66355F074631ED6DC965F7 /* Pods-Fashionably.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -98,9 +125,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 815782A121EA815000B2F911 /* Build configuration list for PBXNativeTarget "Fashionably" */;
 			buildPhases = (
+				FBD92A67D27C22CB42747847 /* [CP] Check Pods Manifest.lock */,
 				8157828B21EA814F00B2F911 /* Sources */,
 				8157828C21EA814F00B2F911 /* Frameworks */,
 				8157828D21EA814F00B2F911 /* Resources */,
+				54DB975776C5C8FC4E19E5B5 /* [CP] Embed Pods Frameworks */,
+				CC3B92B6A040986504660664 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -157,13 +187,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		54DB975776C5C8FC4E19E5B5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Fashionably/Pods-Fashionably-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fashionably/Pods-Fashionably-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC3B92B6A040986504660664 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fashionably/Pods-Fashionably-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBD92A67D27C22CB42747847 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Fashionably-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8157828B21EA814F00B2F911 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				815782AA21EAB66000B2F911 /* WeatherDataModel.swift in Sources */,
 				8157829521EA814F00B2F911 /* ViewController.swift in Sources */,
-				815782A821EA8D1400B2F911 /* ClothesClassifier.swift in Sources */,
+				815782A821EA8D1400B2F911 /* Clothing.swift in Sources */,
 				8157829321EA814F00B2F911 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,15 +393,13 @@
 		};
 		815782A221EA815000B2F911 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A7A9D1657203A6A0C20A377 /* Pods-Fashionably.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3UR7A598CG;
 				INFOPLIST_FILE = Fashionably/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Hrithvik-Alex.Fashionably";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -324,15 +409,13 @@
 		};
 		815782A321EA815000B2F911 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A66355F074631ED6DC965F7 /* Pods-Fashionably.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3UR7A598CG;
 				INFOPLIST_FILE = Fashionably/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Hrithvik-Alex.Fashionably";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
