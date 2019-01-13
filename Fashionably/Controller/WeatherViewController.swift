@@ -8,12 +8,11 @@
 
 import UIKit
 import CoreLocation
-import CoreML
-import Vision
 import Alamofire
 import SwiftyJSON
+import RealmSwift
 
-class ViewController: UIViewController, CLLocationManagerDelegate {
+class WeatherViewController: UIViewController, CLLocationManagerDelegate {
 
     
     @IBOutlet weak var weatherLabel: UILabel!
@@ -26,60 +25,22 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
     let weatherDataModel = WeatherDataModel()
     
-//     let imagePicker = UIImagePickerController()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       let realm = try! Realm()
+        print(Realm.Configuration.defaultConfiguration.fileURL)
         
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
-//        imagePicker.delegate = self
-//        imagePicker.allowsEditing = false
-//        imagePicker.sourceType = .camera
+
     }
     
-    //Image picker methods
-//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-//
-//
-//        if let userPickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-//            guard let ciImage = CIImage(image: userPickedImage)else {
-//                fatalError("could not convert")
-//            }
-//
-//            detect(image: ciImage)
-//            ImageView.image = userPickedImage
-//        }
-//
-//        imagePicker.dismiss(animated: true, completion: nil)
-//    }
-//
-//    func detect(image: CIImage){
-//
-//        guard let model = try? VNCoreMLModel(for: FlowerClassifier().model) else {
-//            fatalError("cannot import")
-//        }
-//
-//        let request = VNCoreMLRequest(model: model) { (request, error) in
-//            guard let classification = request.results?.first as? VNClassificationObservation else {
-//                fatalError("No flower found")
-//            }
-//
-//            self.navigationItem.title = classification.identifier.capitalized
-//            self.requestInfo(flowerType: classification.identifier)
-//
-//        }
-//
-//        let handler = VNImageRequestHandler(ciImage: image)
-//        
-//        do {
-//            try handler.perform([request])
-//        } catch {
-//            print(error)
-//        }
-//    }
+    
     
     
     // Getting Weather Data from API
@@ -135,7 +96,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         print(error)
     }
     
+    
 }
+
+
+
+
+
+
+
+
 
 
 

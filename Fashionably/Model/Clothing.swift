@@ -7,16 +7,12 @@
 //
 
 import Foundation
-class Clothing {
-    var type : String = ""// Upper body, lower body, feet
-    var warmthRating : Int = 0
-    var category : String = "" // trousers, pullovers, coats , etc.
-    var formalityRating : Int = 0
-    init(type: String, warmthRating: Int, category: String, formalityRating: Int) {
-        self.type = type
-        self.warmthRating = warmthRating
-        self.category = category
-        self.formalityRating = formalityRating
-    }
-    
+import RealmSwift
+
+class Clothing: Object {
+    @objc dynamic var type : String = ""// Upper body, lower body, feet
+    @objc dynamic var warmthRating : Double = 0.0
+    @objc dynamic var category : String = "" // trousers, pullovers, coats , etc.
+    @objc dynamic var formalityRating : Double = 0.0
+
 }
