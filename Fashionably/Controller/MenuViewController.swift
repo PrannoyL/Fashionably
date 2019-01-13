@@ -9,11 +9,15 @@
 import UIKit
 import CoreML
 import Vision
+import RealmSwift
 
 class MenuViewController: UIViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     
     
      let imagePicker = UIImagePickerController()
+    
+    let realm = try! Realm()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -116,6 +120,16 @@ class MenuViewController: UIViewController, UIImagePickerControllerDelegate,UINa
     
     @IBAction func addClothingPressed(_ sender: UIButton) {
         let newClothing = Clothing()
+        newClothing.type = getClothingType()
+        newClothing.warmthRating = setWarmthRating(type: newClothing.type)
+        newClothing.formalityRating = setFormalRating(type: newClothing.type)
+        do {
+            try realm.write {
+                realm.add(newClothing)
+            }
+        }catch {
+                print("Error saving clothing \(error)")
+            }
         
     }
     

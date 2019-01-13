@@ -79,7 +79,7 @@
                                 <state key="normal" title="Sign in"/>
                                 <connections>
                                     <action selector="buttonPressed:" destination="STU-6h-Fvy" eventType="touchDown" id="0Bf-bG-dnj"/>
-                                    <segue destination="1cQ-rp-onC" kind="showDetail" id="epg-uZ-hfv"/>
+                                    <segue destination="1cQ-rp-onC" kind="showDetail" identifier="SignIn" id="epg-uZ-hfv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -233,7 +233,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Skp-zh-mZl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2350" y="425"/>
+            <point key="canvasLocation" x="2196" y="783"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xaW-zx-MNr">

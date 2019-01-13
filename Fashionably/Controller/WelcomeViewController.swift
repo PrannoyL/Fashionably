@@ -26,8 +26,8 @@ class WelcomeViewController: UIViewController {
     
 
     @IBAction func buttonPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
+        performSegue(withIdentifier: "SignIn", sender: <#T##Any?#>)
     }
     
-
+    
 }

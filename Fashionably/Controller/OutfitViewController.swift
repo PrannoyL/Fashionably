@@ -7,13 +7,23 @@
 //
 
 import UIKit
+import RealmSwift
 
 class OutfitViewController: UIViewController {
 
+    let realm = try! Realm()
+    
+    var clothes : Results<Clothing>!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadClothes()
 
-        // Do any additional setup after loading the view.
+    }
+    
+    
+    func loadClothes() {
+        clothes = realm.objects(Clothing.self)
     }
     
     
