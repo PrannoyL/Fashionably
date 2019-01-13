@@ -2,6 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
+	<key>NSLocationUsageDescription</key>
+	<string>We need your location to obtain your current weather conditions.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We need your location to obtain your current weather conditions.</string>
 	<key>NSCameraUsageDescription</key>
 	<string>We need to take photos of your clothes to give you accurate information about your wardrobe choices.</string>
 	<key>CFBundleDevelopmentRegion</key>

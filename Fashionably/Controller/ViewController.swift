@@ -13,8 +13,11 @@ import Vision
 import Alamofire
 import SwiftyJSON
 
-class ViewController: UIViewController, CLLocationManagerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ViewController: UIViewController, CLLocationManagerDelegate {
 
+    
+    @IBOutlet weak var weatherLabel: UILabel!
+    
     
     let WEATHER_URL = "http://api.openweathermap.org/data/2.5/weather"
     let APP_ID = "e72ca729af228beabd5d20e3b7749713"
@@ -23,7 +26,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIImagePicker
     let locationManager = CLLocationManager()
     let weatherDataModel = WeatherDataModel()
     
-     let imagePicker = UIImagePickerController()
+//     let imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,9 +35,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIImagePicker
         locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
-        imagePicker.delegate = self
-        imagePicker.allowsEditing = false
-        imagePicker.sourceType = .camera
+//        imagePicker.delegate = self
+//        imagePicker.allowsEditing = false
+//        imagePicker.sourceType = .camera
     }
     
     //Image picker methods
@@ -90,11 +93,21 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIImagePicker
                 let weatherJSON : JSON = JSON(response.result.value!)
                 print(weatherJSON)
                 
+                self.updateWeatherData(json: weatherJSON);
+                
             }
             else {
                 print("Error \(String(describing: response.result.error))")
             }
         }
+        
+    }
+    
+    func updateWeatherData(json : JSON){
+        let tempResult = json["main"]["temp"].doubleValue
+        
+        weatherDataModel.temperature = Int(tempResult - 273.15)
+       weatherLabel.text = "\(weatherDataModel.temperature)"
         
     }
     
